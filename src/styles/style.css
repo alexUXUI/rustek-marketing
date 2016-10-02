@@ -106,17 +106,9 @@ body {
 
 @media only screen and (max-width: 700px) {
 
-  .logo {
-    overflow: hidden;
-  }
-
-  .left-line {
-    display: none;
-  }
-
-  .right-line {
-    display: none;
-  }
+  .logo { overflow: hidden; }
+  .left-line { display: none; }
+  .right-line { display: none; }
 
   #logo {
     width: 200%;
