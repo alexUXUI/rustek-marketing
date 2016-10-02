@@ -7,7 +7,6 @@ body {
 }
 
 button {
-  display: none;
   bottom: 45px;
   margin-left: -10%;
   position: absolute;
@@ -59,6 +58,9 @@ button:hover {
   margin-top: 40px;
   font-family: sans-serif;
   font-size: 80px;
+  background-image: url("../../assets/svg/rustek-logo.svg");
+  background-repeat: no-repeat;
+
 }
 
 .dropping-soon {
@@ -69,7 +71,6 @@ button:hover {
 }
 
 .social-media {
-  display: none;
   position: absolute;
   height: 100px;
   width: 25%;
