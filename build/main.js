@@ -8214,6 +8214,11 @@
 	  return setTimeout(blur, 2000);
 	};
 
+	animation.addSocialMedia = function () {
+	  $('.fb').toggleClass('hidden');
+	  $('.instagram').toggleClass('hidden');
+	};
+
 	module.exports = animation;
 
 /***/ },
@@ -8242,6 +8247,7 @@
 	(function () {
 	  _animations2.default.blur();
 	  _rustek2.default.init();
+	  _animations2.default.addSocialMedia();
 	})();
 
 /***/ }

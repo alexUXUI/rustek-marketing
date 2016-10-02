@@ -11,4 +11,5 @@ import animation from './animations'
 (() => {
   animation.blur()
   rustek.init()
+  animation.addSocialMedia()
 })()

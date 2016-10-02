@@ -7,4 +7,9 @@ animation.blur = () => {
   return setTimeout(blur, 2000)
 }
 
+animation.addSocialMedia = () => {
+  $('.fb').toggleClass('hidden')
+  $('.instagram').toggleClass('hidden')
+}
+
 module.exports = animation
