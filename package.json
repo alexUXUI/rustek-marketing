@@ -6,14 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "echo \"deploying to firebase\" && firebase deploy",
-    "serve": "webpack-dev-server",
-    "minify": "webpack -p"
+    "serve": "echo \"running dev server\" && webpack-dev-server",
+    "minify": "echo \"minifing js\" && webpack -p"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexUXUI/rustek-marketing.git"
   },
-  "author": "Alex Bennett <alexandergraybennett@gmail.com> (http://thedope.agency)",
+  "author": "Alex Bennett <alexandergraybennett@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alexUXUI/rustek-marketing/issues"

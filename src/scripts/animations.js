@@ -3,13 +3,15 @@
 var animation = {}
 
 animation.blur = () => {
-  var blur = () => $('.container').toggleClass('blur')
-  return setTimeout(blur, 2000)
+  return $('.container').toggleClass('blur')
 }
 
 animation.addSocialMedia = () => {
-  // $('.fb').toggleClass('hidden')
-  // $('.instagram').toggleClass('hidden')
+  return $('.social-media').toggleClass('hidden')
+}
+
+animation.addDroppingSoon = () => {
+  return $('.dropping-soon').toggleClass('hidden')
 }
 
 module.exports = animation
