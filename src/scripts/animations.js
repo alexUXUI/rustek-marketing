@@ -2,11 +2,9 @@
 
 var animation = {}
 
-animation.init = function(){
-  console.log('sup world from animation');
+animation.blur = () => {
+  var blur = () => $('.container').toggleClass('blur')
+  return setTimeout(blur, 2000)
 }
 
-animation.init()
-
-
-module.exports = animation;
+module.exports = animation

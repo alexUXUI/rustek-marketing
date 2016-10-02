@@ -1,14 +1,11 @@
 `use strict`
 
-var animations = require('./animations')
+import animations from './animations'
 
-var rustek = {}
+const rustek = {}
 
 rustek.init = function(){
   console.log('sup world from rustek');
 }
-
-rustek.init()
-animations.init()
 
 module.exports = rustek

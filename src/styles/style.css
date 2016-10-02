@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -36,7 +37,17 @@ button:hover {
   margin: auto;
   z-index: -10;
   position: fixed;
+}
+
+.blur {
   -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: url(#blur);
+  filter: blur(15px); filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+  -webkit-transition: 2s -webkit-filter linear;
+  -o-transition: 2s -o-filter linear;
 }
 
 .container-overlay {
@@ -71,6 +82,7 @@ button:hover {
 }
 
 .social-media {
+  display: none;
   position: absolute;
   height: 100px;
   width: 25%;

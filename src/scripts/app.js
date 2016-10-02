@@ -1,16 +1,14 @@
+/*
+ * This file imports the logic from
+ * the other modules and invokes it.
+*/
+
 `use strict`
 
-var rustek = require('./rustek')
-var animation = require('./animations')
+import rustek from './rustek'
+import animation from './animations'
 
-var app = {}
-
-app.init = function(){
-  return console.log('sup world from app')
-}
-
-app.init()
-rustek.init()
-animation.init()
-
-module.exports = app
+(() => {
+  animation.blur()
+  rustek.init()
+})()
