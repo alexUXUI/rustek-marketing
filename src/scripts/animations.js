@@ -8,8 +8,8 @@ animation.blur = () => {
 }
 
 animation.addSocialMedia = () => {
-  $('.fb').toggleClass('hidden')
-  $('.instagram').toggleClass('hidden')
+  // $('.fb').toggleClass('hidden')
+  // $('.instagram').toggleClass('hidden')
 }
 
 module.exports = animation

@@ -1,16 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
   background-color: black;
   height: 100vh;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url("../../assets/jpg/rustek-home-bg-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,12 +45,9 @@ body {
   color: white;
   z-index: 100;
   position: absolute;
-  width: 98vw;
+  min-width: 98vw;
   height: 100%;
   margin-top: 40px;
-  font-family: sans-serif;
-  background-image: url("../../assets/svg/rustek-logo-lines.svg");
-  background-repeat: no-repeat;
 }
 
 .dropping-soon {
@@ -63,24 +55,21 @@ body {
   position: absolute;
   bottom: 0;
   right: 2%;
-  background-image: url("../../assets/svg/dropping-soon.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   height: 20%;
-  width: 40%;
+  min-width: 40%;
 }
 
 .social-media {
   position: absolute;
-  display: flex;
   height: 100px;
-  width: 25%;
+  width: 250px;
   bottom: 25%;
   background-color: cornflowerblue;
-  flex-direction: row;
   background-color: transparent;
   z-index: 500;
-
+  margin: auto;
+  left: 50%;
+  margin-left: -112.50px;
 }
 
 .fb {
@@ -91,6 +80,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   transition:all 0.3s ease;
+  float: right;
 }
 
 .fb:hover {
@@ -106,9 +96,36 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   transition:all 0.3s ease;
+  float: left;
 }
 
 .instagram:hover {
   border-radius: 5%;
   background-color: white;
+}
+
+
+@media only screen and (max-width: 650px) {
+
+  .logo {
+    overflow: hidden;
+  }
+
+  .left-line {
+    display: none;
+  }
+
+  .right-line {
+    display: none;
+  }
+
+  #logo {
+    width: 200%;
+    margin-left: -50%;
+  }
+
+  #dropping-soon {
+    width: 90%;
+    margin-bottom: -50px;
+  }
 }
