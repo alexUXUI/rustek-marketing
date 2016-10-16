@@ -5,7 +5,11 @@ body {
   height: 100vh;
 }
 
-.container {
+p {
+  color: white;
+}
+
+.bg {
   background-image: url("../../assets/jpg/rustek-home-bg-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,7 +22,7 @@ body {
 }
 
 .hidden {
-  display: none;
+  /*display: none;*/
 }
 
 .blur {
@@ -32,13 +36,80 @@ body {
   -o-transition: 2s -o-filter linear;
 }
 
-.container-overlay {
-  height: 100vh;
-  width: 100vw;
-  margin: auto;
-  z-index: -8;
+.email-sign-up {
   position: absolute;
-  opacity: 1;
+  width: 200px;
+  background: transparent;
+  height: 200px;
+  top: 30%;
+  left: 50%;
+  margin-left: -100px;
+  z-index: 10000;
+}
+
+.email-sign-up p {
+  color: white;
+}
+
+input[type="submit"] {
+  border: 3px solid transparent;
+  background-color: white;
+  border-radius: 5px;
+  color: #424242;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  transition: all .3s ease;
+}
+
+input[type="submit"]:hover {
+  border: 3px solid transparent;
+  background-color: white;
+  border-radius: 5px;
+  color: #424242;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: #424242;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+input[type="email"]::-webkit-input-placeholder {
+  color: #424242;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+input[type='text'] {
+  opacity: .7;
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 0px;
+  transition: all .3s ease;
+  border-radius: 0px 5px 5px 0px;
+}
+
+input[type='text']:focus {
+  background-color: black;
+  color: white;
+}
+
+input[type='email'] {
+  opacity: .7;
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 0px;
+  transition: all .3s ease;
+  display: inline-block;
+  border-radius: 5px 0px 0px 5px;
+
+}
+
+input[type='email']:focus {
+  background-color: black;
+  color: white;
 }
 
 .logo {
@@ -62,9 +133,8 @@ body {
 .social-media {
   position: absolute;
   height: 100px;
-  width: 250px;
+  width: 230px;
   bottom: 25%;
-  background-color: cornflowerblue;
   background-color: transparent;
   z-index: 500;
   margin: auto;
@@ -73,36 +143,34 @@ body {
 }
 
 .fb {
-  height: 100%;
+  height: 150px;
   width: 50%;
   background-color: transparent;
-  background-image: url("../../assets/svg/fb.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   transition:all 0.3s ease;
   float: right;
 }
 
-.fb:hover {
-  border-radius: 5%;
-  background-color: white;
-}
-
 .instagram {
-  height: 100%;
+  height: 150px;
   width: 50%;
   background-color: transparent;
-  background-image: url("../../assets/svg/instagram.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   transition:all 0.3s ease;
   float: left;
 }
 
-.instagram:hover {
-  border-radius: 5%;
-  background-color: white;
+.social-hover {
+  fill: white;
+  fill-opacity: .5;
 }
+
+.insta-bg-hover {
+  background-color: tomato;
+}
+
+.form-group {
+  display: -webkit-box;
+}
+
 
 @media only screen and (max-width: 700px) {
 
@@ -118,5 +186,18 @@ body {
   #dropping-soon {
     width: 90%;
     margin-bottom: -50px;
+  }
+
+  .social-media {
+    height: 155px;
+    width: 50%;
+  }
+
+  .fb {
+    height: 150px;
+  }
+
+  .instagram {
+
   }
 }

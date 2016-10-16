@@ -1,17 +1,21 @@
 `use strict`
 
-var animation = {}
+var animation = {
+  blur: () => {
+    return $('.bg').toggleClass('blur')
+  },
 
-animation.blur = () => {
-  return $('.container').toggleClass('blur')
-}
+  addSocialMedia: () => {
+    return $('.social-media').toggleClass('hidden')
+  },
 
-animation.addSocialMedia = () => {
-  return $('.social-media').toggleClass('hidden')
-}
+  addDroppingSoon: () => {
+    return $('.dropping-soon').toggleClass('hidden')
+  },
 
-animation.addDroppingSoon = () => {
-  return $('.dropping-soon').toggleClass('hidden')
+  addSignUp: () => {
+    return $('.email-sign-up').toggleClass('hidden')
+  }
 }
 
 module.exports = animation

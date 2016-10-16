@@ -6,9 +6,11 @@ var router = express.Router();
 
 dotenv.load();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  console.log('hit send route');
+router.post('/', function(req, res, next) {
+
+  var name = req.body.name
+  var email = req.body.email
+  console.log(`name: ${ name  }, email ${email}`)
 
   var auth = {
     auth: {
@@ -21,18 +23,19 @@ router.get('/', function(req, res, next) {
 
   nodemailerMailgun.sendMail({
     from: 'alexandergraybennett@gmail.com',
-    to: 'alexandergraybennett@gmail.com', // An array if you have multiple recipients.
-    subject: 'Hey you, foooooo!',
-    text: 'Getting closer man',
+    to: `${ email }`,
+    subject: `Hey ${ name }`,
+    html: `We <b>greatly</b> appreciate you signing up!
+    <br />
+    -- Rustek Team
+    `,
   }, function (err, info) {
-    if (err) {
-      console.log('Error: ' + err);
-    }
-    else {
-      console.log('Response: ' + info);
-    }
+    if (err) console.log('Error: ' + err);
+    else console.log('Response: ' + info);
   });
-  res.render('index', { title: 'Email Sent' });
+
+  res.redirect('https://rustek-marketing.firebaseapp.com/');
+
 });
 
 module.exports = router;
