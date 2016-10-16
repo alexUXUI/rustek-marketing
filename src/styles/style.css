@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
-  height: 100vh;
 }
 
 p {
@@ -18,7 +17,7 @@ h5 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 768px;
   width: 100vw;
   margin: 0;
   padding: 0;
@@ -29,6 +28,11 @@ h5 {
 }
 
 .blur {
+  height: 768px;
+  width: 100%;
+  position: absolute;
+  background-color: transparent;
+  top: 0;
   -webkit-filter: blur(55px);
   -moz-filter: blur(55px);
   -o-filter: blur(55px);
@@ -37,12 +41,12 @@ h5 {
   filter: blur(15px); filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
   -webkit-transition: 2s -webkit-filter linear;
   -o-transition: 2s -o-filter linear;
-  z-index: 100;
+  z-index: 10000;
 }
 
 .blur-container {
-  height: 100vh;
-  width: 100vw;
+  height: 768px;
+  width: 100%;
   position: absolute;
   z-index: 100;
   background-color: #424242;
@@ -84,7 +88,6 @@ h5 {
 input {
   width: 50%;
   padding-left: 10px;
-
 }
 
 input[type="submit"] {
@@ -98,7 +101,6 @@ input[type="submit"] {
   width: 200px;
   display: inline-block;
   margin-top: 10px;
-  /*margin: auto;*/
   height: 40px;
   padding-left: 0;
 }
@@ -246,26 +248,4 @@ input[type='email']:focus {
   .left-line { display: none; }
   .right-line { display: none; }
 
-  /*#logo {
-    width: 200%;
-    margin-left: -50%;
-  }
-
-  #dropping-soon {
-    width: 90%;
-    margin-bottom: -50px;
-  }
-
-  .social-media {
-    height: 155px;
-    width: 50%;
-  }
-
-  .fb {
-    height: 150px;
-  }
-
-  .instagram {
-
-  }*/
 }

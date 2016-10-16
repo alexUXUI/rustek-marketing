@@ -1,12 +1,21 @@
 `use strict`
 
 var animation = {
+
+  fade: () => {
+    $('.faded').fadeOut(3000)
+  },
+
   blur: () => {
     return $('.bg').toggleClass('blur')
   },
 
   addSocialMedia: () => {
     return $('.social-media').toggleClass('hidden')
+  },
+
+  addRustek: () => {
+    return $('.logo').toggleClass('hidden')
   },
 
   addDroppingSoon: () => {
@@ -16,6 +25,7 @@ var animation = {
   addSignUp: () => {
     return $('.email-sign-up').toggleClass('hidden')
   }
+
 }
 
 module.exports = animation

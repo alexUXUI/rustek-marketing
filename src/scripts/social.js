@@ -7,7 +7,6 @@ var e = {}
 e.igHover = () => {
   $('.instagram').hover(() => {
     $(this).toggleClass('insta-bg-hover')
-    console.log('insta hovered');
     $('#instagram').toggleClass('social-hover')
   })
 }
@@ -18,5 +17,10 @@ e.fbHover = () => {
   })
 }
 
+e.addToolTips = () => {
+  return $('[data-toggle="tooltip"]').tooltip()
+}
+
 e.igHover()
 e.fbHover()
+e.addToolTips()

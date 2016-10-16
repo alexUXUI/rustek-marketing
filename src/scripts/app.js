@@ -10,12 +10,13 @@ import animation from './animations'
 import social from './social'
 
 function *playWebsite() {
-  yield setTimeout(animation.addDroppingSoon, 2000)
-  yield setTimeout(animation.blur, 2000)
-  // yield setTimeout(animation.blur, 4000)
-  yield setTimeout(animation.addSocialMedia, 5000)
-  yield setTimeout(animation.addSignUp, 4600)
-  yield setTimeout(rustek.init, 4600)
+  yield setTimeout(animation.fade, 1000)
+  yield setTimeout(animation.addRustek, 500)
+  yield setTimeout(animation.addDroppingSoon, 1500)
+  yield setTimeout(animation.blur, 4500)
+  yield setTimeout(animation.addSocialMedia, 5500)
+  yield setTimeout(animation.addSignUp, 5100)
+  yield setTimeout(rustek.init, 5100)
 }
 
 // function *playWebsite() {
@@ -32,11 +33,3 @@ const player = playWebsite()
 for(let playerFunction of player) {
    player.next()
  }
-
- $(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-});
-
-
-// invoke social
-// social.igHover()
