@@ -2,15 +2,31 @@ var express = require('express');
 var nodemailer = require('nodemailer');
 var mg = require('nodemailer-mailgun-transport');
 var dotenv = require('dotenv');
-var router = express.Router();
 
+var router = express.Router();
 dotenv.load();
 
+
+var knex = require('knex')({
+  client: 'pg',
+  connection: 'postgres://hvcansxxrxjfxl:Ih2ZZwA5x5Uke1DTvyk2YPi__o@ec2-54-243-60-62.compute-1.amazonaws.com:5432/dd3dlr1mhva919?ssl=true'
+});
+
+
 router.post('/', function(req, res, next) {
+
+  console.log('hit the signup route');
 
   var name = req.body.name
   var email = req.body.email
   console.log(`name: ${ name  }, email ${email}`)
+
+  knex('followers').insert({
+    username: name,
+    email: email
+  }, 'id').then(function(id){
+    console.log(id.name, id.email);
+  })
 
   var auth = {
     auth: {

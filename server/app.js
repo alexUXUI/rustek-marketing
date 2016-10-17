@@ -15,8 +15,7 @@ var app = express();
 
 var knex = require('knex')({
   client: 'pg',
-  // connection: 'postgres://dkkrmpowshaegz:1px7fDlATLW8UH7im7WOlGrWyh@ec2-54-243-203-143.compute-1.amazonaws.com:5432/d7o4uvt2ijj2o1?ssl=true'
-  connection: process.env.DB_CONNECTION
+  connection: 'postgres://hvcansxxrxjfxl:Ih2ZZwA5x5Uke1DTvyk2YPi__o@ec2-54-243-60-62.compute-1.amazonaws.com:5432/dd3dlr1mhva919?ssl=true'
 });
 
 // view engine setup
@@ -68,5 +67,9 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+app.listen(1337, function(){
+  console.log('listening on 1337');
+})
 
 module.exports = app;
