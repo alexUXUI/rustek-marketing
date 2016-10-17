@@ -34,7 +34,7 @@ router.post('/', function(req, res, next) {
     else console.log('Response: ' + info);
   });
 
-  res.redirect('https://rustek.co/views/thankyou.html');
+  res.redirect('http://rustek.co/views/thankyou.html');
 
 });
 
