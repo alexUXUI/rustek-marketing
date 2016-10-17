@@ -28,6 +28,13 @@ function *playWebsite() {
 //   yield setTimeout(rustek.init, 0)
 // }
 
+var $myForm = $(".myForm");
+$myForm.submit(function(){
+    $myForm.submit(function(){
+        return false;
+    });
+});
+
 const player = playWebsite()
 
 for(let playerFunction of player) {
